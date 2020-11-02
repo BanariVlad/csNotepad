@@ -19,43 +19,51 @@ namespace Notepad
             TextRedactor.SetContextMenu(richTextBox1);
         }
 
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TextRedactor.NewFile(richTextBox1);
-        }
+        private void newToolStripMenuItem_Click(object sender, EventArgs e) => TextRedactor.NewFile(richTextBox1);
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e) => TextRedactor.OpenFile(richTextBox1);
+        
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) => TextRedactor.SaveFile(richTextBox1);
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) => TextRedactor.SaveAsFile(richTextBox1);
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e) => Redactor.CutText(richTextBox1);
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e) => Redactor.CopyText(richTextBox1);
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e) => Redactor.PasteText(richTextBox1);
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e) => Redactor.HelpMenu();
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e) => Redactor.PrintFile();
+
+        private void bToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+
+        private void iToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
+
+        private void rToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+
+        private void toolStripTextBox4_TextChanged(object sender, EventArgs e)
         {
-            TextRedactor.OpenFile(richTextBox1);
+            try
+            {
+                richTextBox1.Font = new Font("Segoe UI", Convert.ToInt16(toolStripTextBox4.Text), FontStyle.Bold);
+            }
+            catch
+            {
+                //
+            }
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TextRedactor.SaveFile(richTextBox1);
-        }
-
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TextRedactor.SaveAsFile(richTextBox1);
-        }
-
-        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Redactor.CutText(richTextBox1);
-        }
-
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Redactor.CopyText(richTextBox1);
-        }
-
-        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Redactor.PasteText(richTextBox1);
+            TextRedactor.PickColor(richTextBox1);
         }
     }
 }

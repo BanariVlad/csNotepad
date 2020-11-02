@@ -1,4 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Drawing.Printing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Notepad
@@ -35,15 +39,37 @@ namespace Notepad
 
         public void SaveFile(RichTextBox textBox)
         {
-            File.WriteAllText(_path, textBox.Text);
+            try
+            {
+                File.WriteAllText(_path, textBox.Text);
+            }
+            catch
+            {
+                //
+            }
         }
 
         public void SaveAsFile(RichTextBox textBox)
         {
-            var selectFile = new OpenFileDialog();
-            if (SelectFile(selectFile))
+            var saveFile = new SaveFileDialog();
+            saveFile.DefaultExt = ".txt";
+            if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                SaveFile(textBox);
+                using (var writer = new StreamWriter(saveFile.FileName, true))
+                {
+                    writer.WriteLine(textBox.Text);
+                    writer.Close();
+                }
+            }
+        }
+        
+        public static void PrintFile()
+        {
+            var printDocument = new PrintDocument();
+            var printDialog = new PrintDialog {Document = printDocument};
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDialog.Document.Print();
             }
         }
 
@@ -60,26 +86,33 @@ namespace Notepad
             textBox.ContextMenuStrip = contextMenu;
         }
 
-        public static void CopyText(TextBoxBase textBox)
+        public static void CopyText(TextBoxBase textBox) => Clipboard.SetText(textBox.SelectedText);
+
+        public static void PasteText(TextBoxBase textBox) => textBox.Paste();
+
+        public static void CutText(TextBoxBase textBox) => textBox.Cut();
+
+        public static void SetFont(RichTextBox textBox, string value)
         {
-            try
-            {
-                Clipboard.SetText(textBox.SelectedText);
-            }
-            catch
-            {
-                //ignore
-            }
+            textBox.Font = new Font("Segoe UI", Convert.ToInt16(value), FontStyle.Bold);
         }
 
-        public static void PasteText(TextBoxBase textBox)
+        public static void HelpMenu()
         {
-            textBox.Paste();
+            var dialog = new Form();
+            var label = new Label {Text = @"HELP MEE PLSSS!"};
+            dialog.Controls.Add(label);
+            dialog.ShowDialog();
         }
 
-        public static void CutText(TextBoxBase textBox)
+        public void PickColor(RichTextBox richBox)
         {
-            textBox.Cut();
+            var colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                richBox.SelectionColor = colorDialog.Color;
+            }
+            
         }
     }
 }

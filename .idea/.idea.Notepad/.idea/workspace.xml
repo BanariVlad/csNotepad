@@ -4,11 +4,23 @@
     <projectFile>Notepad/Notepad.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1adfcd77-08eb-40e9-9d7c-f20afa99a84b" name="Default Changelist" comment="" />
+    <list default="true" id="1adfcd77-08eb-40e9-9d7c-f20afa99a84b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Notepad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Notepad/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notepad/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Notepad/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notepad/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Notepad/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notepad/Redactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Notepad/Redactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notepad/bin/Debug/Notepad.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Notepad/bin/Debug/Notepad.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notepad/bin/Debug/Notepad.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Notepad/bin/Debug/Notepad.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notepad/obj/Debug/Notepad.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Notepad/obj/Debug/Notepad.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notepad/obj/Debug/Notepad.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Notepad/obj/Debug/Notepad.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -20,6 +32,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1jUoIDqrVWKLJ2KvxRNvt83kcPZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,34 +71,49 @@
       <option name="presentableId" value="Default" />
       <updated>1603867949953</updated>
       <workItem from="1603867953428" duration="8774000" />
+      <workItem from="1603887247081" duration="353000" />
+      <workItem from="1604045857306" duration="116000" />
+      <workItem from="1604335376115" duration="6246000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1603876923350">
+    <state x="629" y="418" width="452" height="204" key="Github.ShareDialog" timestamp="1603887318497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603876923350" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1603876923350">
+    <state x="629" y="418" width="452" height="204" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603887318497" />
+    <state x="733" y="226" key="Github.UntrackedFilesDialog" timestamp="1603887328703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603876923350" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1603876923350">
+    <state x="733" y="226" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603887328703" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1604341629965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603876923350" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1603876923350">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604045974676" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604341629965" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1604341629965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603876923350" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604045974676" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604341629965" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1604341629965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604045974676" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604341629965" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1604341629965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604045974676" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604341629965" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603875846362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
