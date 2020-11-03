@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Notepad
@@ -113,6 +114,20 @@ namespace Notepad
                 richBox.SelectionColor = colorDialog.Color;
             }
             
+        }
+
+        public void CountWords(RichTextBox richBox, ToolStripTextBox textBox)
+        {
+            var words = richBox.Text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Length;
+            textBox.Text = @"Words: " + words;
+        }
+
+        public static void FindWord(RichTextBox richBox, string value)
+        {
+            var word1 = richBox.Text.IndexOf(value, StringComparison.Ordinal);
+            richBox.SelectionStart = word1;
+            richBox.SelectionLength = value.Length;
+            richBox.Focus();
         }
     }
 }

@@ -21,9 +21,7 @@ namespace Notepad
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) => TextRedactor.NewFile(richTextBox1);
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
+        private void richTextBox1_TextChanged(object sender, EventArgs e) => TextRedactor.CountWords(richTextBox1, toolStripTextBox1);
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e) => TextRedactor.OpenFile(richTextBox1);
         
@@ -61,9 +59,18 @@ namespace Notepad
             }
         }
 
-        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e) => TextRedactor.PickColor(richTextBox1);
+
+        private void findToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TextRedactor.PickColor(richTextBox1);
+            var form = new Form{Size = new Size(100, 100), FormBorderStyle = FormBorderStyle.FixedToolWindow};
+            var textBox = new TextBox{Size = new Size(100, 25)};
+            var textBox = new TextBox{Size = new Size(100, 25)};
+            var btn = new Button{Text = @"Find", Size = new Size(100, 30), Location = new Point(0, 30)};
+            btn.Click += (send, evt) => Redactor.FindWord(richTextBox1, textBox.Text);
+            form.Controls.Add(textBox);
+            form.Controls.Add(btn);
+            form.ShowDialog();
         }
     }
 }

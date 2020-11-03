@@ -43,16 +43,17 @@
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.findReplaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox4 = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -155,9 +156,23 @@
             // 
             // findToolStripMenuItem
             // 
+            this.findToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.findToolStripMenuItem1, this.findReplaceToolStripMenuItem});
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.findToolStripMenuItem.Text = "Find";
+            // 
+            // findToolStripMenuItem1
+            // 
+            this.findToolStripMenuItem1.Name = "findToolStripMenuItem1";
+            this.findToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.findToolStripMenuItem1.Text = "Just Find";
+            this.findToolStripMenuItem1.Click += new System.EventHandler(this.findToolStripMenuItem1_Click);
+            // 
+            // findReplaceToolStripMenuItem
+            // 
+            this.findReplaceToolStripMenuItem.Name = "findReplaceToolStripMenuItem";
+            this.findReplaceToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.findReplaceToolStripMenuItem.Text = "Find && Replace";
             // 
             // helpToolStripMenuItem
             // 
@@ -189,6 +204,13 @@
             this.rToolStripMenuItem.Text = "R";
             this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
             // 
+            // colorToolStripMenuItem
+            // 
+            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
+            this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
+            // 
             // toolStripTextBox3
             // 
             this.toolStripTextBox3.Name = "toolStripTextBox3";
@@ -199,13 +221,15 @@
             // toolStripTextBox4
             // 
             this.toolStripTextBox4.Name = "toolStripTextBox4";
-            this.toolStripTextBox4.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox4.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox4.Tag = "FontSize";
+            this.toolStripTextBox4.ToolTipText = "FonSize";
             this.toolStripTextBox4.TextChanged += new System.EventHandler(this.toolStripTextBox4_TextChanged);
             // 
             // menuStrip2
             // 
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripTextBox1, this.toolStripTextBox2});
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripTextBox1});
             this.menuStrip2.Location = new System.Drawing.Point(0, 423);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(800, 27);
@@ -217,19 +241,6 @@
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.ReadOnly = true;
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.ReadOnly = true;
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
-            // 
-            // colorToolStripMenuItem
-            // 
-            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
-            this.colorToolStripMenuItem.Text = "Color";
-            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -251,6 +262,9 @@
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ToolStripMenuItem findReplaceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem1;
+
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox4;
@@ -260,8 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
-
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
 
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
 
