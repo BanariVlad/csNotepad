@@ -65,7 +65,6 @@ namespace Notepad
         {
             var form = new Form{Size = new Size(100, 100), FormBorderStyle = FormBorderStyle.FixedToolWindow};
             var textBox = new TextBox{Size = new Size(100, 25)};
-            var textBox = new TextBox{Size = new Size(100, 25)};
             var btn = new Button{Text = @"Find", Size = new Size(100, 30), Location = new Point(0, 30)};
             btn.Click += (send, evt) => Redactor.FindWord(richTextBox1, textBox.Text);
             form.Controls.Add(textBox);
