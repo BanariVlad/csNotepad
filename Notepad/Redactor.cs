@@ -93,11 +93,6 @@ namespace Notepad
 
         public static void CutText(TextBoxBase textBox) => textBox.Cut();
 
-        public static void SetFont(RichTextBox textBox, string value)
-        {
-            textBox.Font = new Font("Segoe UI", Convert.ToInt16(value), FontStyle.Bold);
-        }
-
         public static void HelpMenu()
         {
             var dialog = new Form();

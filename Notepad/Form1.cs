@@ -71,5 +71,11 @@ namespace Notepad
             form.Controls.Add(btn);
             form.ShowDialog();
         }
+
+        private void leftToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+
+        private void centerToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+
+        private void rightToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
     }
 }
