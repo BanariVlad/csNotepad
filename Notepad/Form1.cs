@@ -66,7 +66,7 @@ namespace Notepad
             var form = new Form{Size = new Size(100, 100), FormBorderStyle = FormBorderStyle.FixedToolWindow};
             var textBox = new TextBox{Size = new Size(100, 25)};
             var btn = new Button{Text = @"Find", Size = new Size(100, 30), Location = new Point(0, 30)};
-            btn.Click += (send, evt) => Redactor.FindWord(richTextBox1, textBox.Text);
+            btn.Click += (send, evt) => Redactor.FindWord(richTextBox1, textBox.Text, form);
             form.Controls.Add(textBox);
             form.Controls.Add(btn);
             form.ShowDialog();
@@ -77,5 +77,18 @@ namespace Notepad
         private void centerToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
 
         private void rightToolStripMenuItem_Click(object sender, EventArgs e) => richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+
+        private void findReplaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new Form{Size = new Size(100, 150), FormBorderStyle = FormBorderStyle.FixedToolWindow};
+            var find = new TextBox{Size = new Size(100, 25)};
+            var replace = new TextBox{Size = new Size(100, 25), Location = new Point(0, 30)};
+            var btn = new Button{Text = @"Find and replace", Size = new Size(100, 30), Location = new Point(0, 60)};
+            btn.Click += (send, evt) => Redactor.FindAndReplace(richTextBox1, find.Text, replace.Text, form);
+            form.Controls.Add(find);
+            form.Controls.Add(replace);
+            form.Controls.Add(btn);
+            form.ShowDialog();
+        }
     }
 }

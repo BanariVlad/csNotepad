@@ -117,12 +117,21 @@ namespace Notepad
             textBox.Text = @"Words: " + words;
         }
 
-        public static void FindWord(RichTextBox richBox, string value)
+        public static void FindWord(RichTextBox richBox, string value, Form form)
         {
+            form.Close();
             var word1 = richBox.Text.IndexOf(value, StringComparison.Ordinal);
             richBox.SelectionStart = word1;
             richBox.SelectionLength = value.Length;
-            richBox.Focus();
+        }
+
+        public static void FindAndReplace(RichTextBox richBox, string findValue, string replaceValue, Form form)
+        {
+            form.Close();
+            var word1 = richBox.Text.IndexOf(findValue, StringComparison.Ordinal);
+            richBox.SelectionStart = word1;
+            richBox.SelectionLength = findValue.Length;
+            richBox.SelectedText = replaceValue;
         }
     }
 }

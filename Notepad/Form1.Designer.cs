@@ -176,6 +176,7 @@
             this.findReplaceToolStripMenuItem.Name = "findReplaceToolStripMenuItem";
             this.findReplaceToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.findReplaceToolStripMenuItem.Text = "Find && Replace";
+            this.findReplaceToolStripMenuItem.Click += new System.EventHandler(this.findReplaceToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
